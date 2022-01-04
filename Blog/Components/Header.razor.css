@@ -29,8 +29,33 @@
 
 svg {
     stroke: #b5b5b5;
+    transition: color 150ms ease;
 }
 
     svg:hover {
+        transition: color 150ms ease;
+    }
+
+    svg.icon-header-sun:hover {
         stroke: #000;
+    }
+
+    svg.icon-header-moon:hover {
+        stroke: #000;
+    }
+
+    svg.icon-header-twitter:hover {
+        stroke: #1DA1F2;
+    }
+
+    svg.icon-header-github:hover {
+        stroke: #000;
+    }
+
+    svg.icon-header-linkedin:hover {
+        stroke: #2867B2;
+    }
+
+    svg.icon-header-at:hover {
+        stroke: darkred;
     }

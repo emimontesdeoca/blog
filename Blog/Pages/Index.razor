@@ -1,16 +1,13 @@
-﻿@page "/"
+﻿@page "/{path?}"
 
-<Blog.Components.Post Title="Overriding a core controller of Pimcore" Date="SEP 10, 2022" />
-<Blog.Components.Post Title="Configure the Apple Magic Keyboard 2 on Windows 10" Date="JUL 4, 2022" />
-<Blog.Components.Post Title="Adding compiled libraries to a NuGet package" Date="JUN 1, 2022" />
-<Blog.Components.Post Title="Make terminal load bash on WSL home directory" Date="MAR 24, 2022" />
-<Blog.Components.Post Title="Dynamic object generation using ExpandoObject" Date="FEB 12, 2022" />
-<Blog.Components.Post Title="Continuous delivery of NuGet package using TravisCI" Date="JAN 2, 2021" />
-<Blog.Components.Post Title="Continuous integration for a .NET Core 3.0 project using TravisCI" Date="DEC 22, 2021" />
-<Blog.Components.Post Title="My take on in-memory cache" Date="NOV 15, 2021" />
-<Blog.Components.Post Title="Take page screenshots using Devtools" Date="OCT 10, 2021" />
-<Blog.Components.Post Title="Custom languages using embedded and external resources in .NET Framework" Date="SEP 8, 2021" />
-<Blog.Components.Post Title="Integration test using Bot Framework and DirectLine for flow cases" Date="JUN 2, 2021" />
-<Blog.Components.Post Title="Integration test using Bot Framework and DirectLine (3)" Date="MAR 23, 2020" />
-<Blog.Components.Post Title="Integration test using Bot Framework and DirectLine (2)" Date="FEB 10, 2020" />
-<Blog.Components.Post Title="Integration test using Bot Framework and DirectLine (1)" Date="JAN 1, 2020" />
+@if (string.IsNullOrEmpty(this.Path))
+{
+    @foreach (var post in Posts.Where(x => x.Enabled))
+    {
+        <Blog.Components.PostItem Data=@post />
+    }
+}
+else
+{
+    <Blog.Components.PostContent Data=@Post Content=@Content />
+}

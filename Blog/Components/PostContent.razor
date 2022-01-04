@@ -1,0 +1,10 @@
+﻿<h4 class="post-content-date">
+    @Data?.Date
+</h4>
+<h1 class="post-content-title">
+    @Data?.Title
+</h1>
+
+<div id="markdown">
+    @((MarkupString) MarkdownContent)
+</div>
