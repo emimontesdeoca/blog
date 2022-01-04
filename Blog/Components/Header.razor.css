@@ -1,0 +1,36 @@
+﻿.header {
+    min-height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.logo {
+    float: left;
+    margin: 0 0 1em 0;
+    cursor: pointer;
+    letter-spacing: 0.8px;
+    font-size: 30px;
+    line-height: 28px;
+    font-weight: 800;
+}
+
+.picture {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+svg {
+    stroke: #b5b5b5;
+}
+
+    svg:hover {
+        stroke: #000;
+    }

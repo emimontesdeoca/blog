@@ -1,0 +1,27 @@
+﻿.post-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.4em;
+}
+
+
+.post-title {
+    font-family: 'Varela Round', sans-serif;
+}
+
+.post-date {
+    padding: 0 0.2em;
+    margin-left: 1em;
+    margin-top: 2px;
+    margin-bottom: 1px;
+    font-family: Montserrat, Arial, Sans-Serif;
+    text-transform: uppercase;
+    display: inline-block;
+    letter-spacing: 1px;
+    font-size: .875rem;
+    color: #b5b5b5;
+    max-width: 120px;
+    min-width: 110px;
+    text-align: right;
+}

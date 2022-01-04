@@ -1,0 +1,12 @@
+﻿<a href="/" class="post-item">
+    <div class="post-title">@Title</div>
+    <div class="post-date">@Date</div>
+</a>
+
+@code {
+    [Parameter]
+    public string Title { get; set; }
+
+    [Parameter]
+    public string Date { get; set; }
+}
