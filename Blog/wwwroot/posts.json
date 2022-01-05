@@ -82,5 +82,11 @@
     "path": "override-method-pimcore-core-bundles",
     "date": "DEC 10, 2020",
     "enabled": true
+  },
+  {
+    "title": "Uploading files to Azure Blob Storage in Blazor",
+    "path": "uploading-files-az-blob-blazor",
+    "date": "JAN 6, 2022",
+    "enabled": true
   }
 ]

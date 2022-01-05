@@ -9,11 +9,6 @@ namespace Blog.Components
     {
         #region Variables
 
-        //private static readonly MarkdownPipeline MarkdownPipeline = new MarkdownPipelineBuilder()
-        //    .UseAdvancedExtensions()
-        //    .UsePrism()
-        //    .Build();
-
         #endregion
 
         #region Injects

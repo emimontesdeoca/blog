@@ -53,7 +53,7 @@ namespace Blog.Pages
                 else
                 {
                     Content = await HttpClient.GetStringAsync($"/posts/{Path}.md")
-                                   ?? string.Empty;
+                              ?? string.Empty;
                 }
             }
         }
