@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /*margin-bottom: 20px;*/
+    margin-bottom: 20px;
 }
 
 .logo {
@@ -27,6 +27,10 @@
     align-items: center;
 }
 
+.toggle-mode {
+    cursor: pointer;
+}
+
 svg {
     stroke: #b5b5b5;
     transition: color 150ms ease;
@@ -37,7 +41,7 @@ svg {
     }
 
     svg.icon-header-sun:hover {
-        stroke: #000;
+        stroke: rgb(255, 236, 0);
     }
 
     svg.icon-header-moon:hover {

@@ -9,6 +9,7 @@
 .post-title {
     font-family: 'Varela Round', sans-serif;
     font-size: 18px;
+    color: var(--textTitle);
 }
 
 .post-date {

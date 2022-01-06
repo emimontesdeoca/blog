@@ -7,7 +7,7 @@ Most of the cases that I've used Azure Blob Storage is in the backend, directly 
 Since I'm a Blazor fanboy, I'm bringing you a way to upload files to an Azure Blob Storage using the native file input from HTML5.
 
 # Prequisites
-* Azure account (if you dont have it use aka.ms/free to have start with a bunch of $$$).
+* Azure account (if you dont have it go [here](aka.ms/free) to with a bunch of $$$).
 * An IDE (VS, Code, any will work)
 * .NET Core 3.0 or above
 
@@ -17,7 +17,7 @@ Go to your Azure portal and let's proceed to create a storage account.
 
 First search for `Storage accounts` and click on the result.
 
-<img src="https://i.gyazo.com/dfc7db88129cd5e2a5015a7bfd846685.png"/>
+<img src="https://i.gyazo.com/dfc7db88129cd5e2a5015a7bfd846685.png" />
 
 After it has loaded, click on `Create`.
 
@@ -37,15 +37,15 @@ I'm going to be using Visual Studio 2022 for this tutorial, but as I said before
 
 Then let's go ahead and create a Blazor poject real quick using Visual Studio in just a bunch of steps.
 
-<img src="https://i.gyazo.com/36476ac771ee1f7cb322c44d11b78fc3.png"/>
+<img src="https://i.gyazo.com/36476ac771ee1f7cb322c44d11b78fc3.png" />
 
-<img src="https://i.gyazo.com/dd015b5c8f1a46c2df0fa5af7cfc08e4.png"/>
+<img src="https://i.gyazo.com/dd015b5c8f1a46c2df0fa5af7cfc08e4.png" />
 
-<img src="https://i.gyazo.com/d47038406d160d9572a4d5b2927bd660.png"/>
+<img src="https://i.gyazo.com/d47038406d160d9572a4d5b2927bd660.png" />
 
 If we run what we just created it will look like this, just a plain normal Blazor application.
 
-<img src="https://i.gyazo.com/95785a6c6cc68050d9989c489df0f599.png"/>
+<img src="https://i.gyazo.com/95785a6c6cc68050d9989c489df0f599.png" />
 
 Now that we have the project created, let's do some UI stuff so we have a new page with a bunch of inputs so we can fill with out keys from the resource, an `InputFile` for the file(s), a button to do something and a message that will result from the action.
 
@@ -62,8 +62,7 @@ The classes are very simple.
 ```csharp
 using System.ComponentModel.DataAnnotations;
 
-namespace UploadingFilesAzBlobBlazor.Models
-{
+namespace UploadingFilesAzBlobBlazor.Models {
     public class BlobRequest
     {
         [Required(ErrorMessage = "Connection string is required")]
