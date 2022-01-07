@@ -47,6 +47,7 @@
 * {
     transition: color 0.2s ease-out, background 0.2s ease-out;
     overflow-y: overlay;
+    font-family: 'Varela Round', sans-serif;
 }
 
 #markdown {
@@ -211,6 +212,7 @@ code {
     padding: 0 5px;
     background-color: #011627;
     border-radius: 0.3em;
+    font-family: monospace;
 }
 
 pre {

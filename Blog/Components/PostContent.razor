@@ -11,6 +11,9 @@
     @((MarkupString) MarkdownContent)
 </div>
 
-<div class="after-post">
-    <p>Share on <a target="_blank" href="@GetTwitterUrl">Twitter</a> · Edit this on <a target="_blank" href="@GetEditUrl">Github</a></p>
-</div>
+@if (Loaded)
+{
+    <div id="after-post" class="after-post">
+        <p>Share on <a target="_blank" href="@GetTwitterUrl">Twitter</a> · Edit this on <a target="_blank" href="@GetEditUrl">Github</a></p>
+    </div>
+}

@@ -9,6 +9,8 @@ namespace Blog.Components
     {
         #region Variables
 
+        public bool Loaded { get; set; } = false;
+
         #endregion
 
         #region Injects
@@ -17,7 +19,7 @@ namespace Blog.Components
         public IJSRuntime? JSRuntime { get; set; }
 
         [Inject]
-        public NavigationManager NavigationManager { get; set; }
+        public NavigationManager? NavigationManager { get; set; }
 
         #endregion
 
@@ -29,14 +31,13 @@ namespace Blog.Components
         [Parameter, EditorRequired]
         public string? Content { get; set; }
 
-        public string MarkdownContent => Markdown.ToHtml(Content ?? string.Empty);
-        public string GetEditUrl => $"https://github.com/emimontesdeoca/blog/edit/main/Blog/wwwroot/posts/{Data?.Path}.md";
-        public string GetTwitterUrl => $"https://twitter.com/intent/tweet?text={Data.Title} {NavigationManager.Uri}";
-
         #endregion
 
         #region Methods
 
+        public string MarkdownContent => Markdown.ToHtml(Content ?? string.Empty);
+        public string GetEditUrl => $"https://github.com/emimontesdeoca/blog/edit/main/Blog/wwwroot/posts/{Data?.Path}.md";
+        public string GetTwitterUrl => $"https://twitter.com/intent/tweet?text={Data.Title} {NavigationManager.Uri}";
 
         #endregion
 
@@ -44,7 +45,12 @@ namespace Blog.Components
 
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
-            await JSRuntime.InvokeVoidAsync("highlightCode");
+            if (firstRender)
+            {
+                await JSRuntime.InvokeVoidAsync("highlightCode");
+                Loaded = true;
+            }
+
         }
 
         #endregion
