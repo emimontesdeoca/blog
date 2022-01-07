@@ -35,6 +35,11 @@ namespace Blog.Components
 
         #endregion
 
+        #region Methods
+
+
+        #endregion
+
         #region Overrides
 
         protected override async Task OnAfterRenderAsync(bool firstRender)

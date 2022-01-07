@@ -11,6 +11,9 @@ namespace Blog.Pages
         [Inject]
         public HttpClient? HttpClient { get; set; }
 
+        [Inject]
+        public NavigationManager? NavigationManager { get; set; }
+
         #endregion
 
         #region Parameters
@@ -49,6 +52,7 @@ namespace Blog.Pages
                 if (Post == null)
                 {
                     Path = string.Empty;
+                    NavigationManager.NavigateTo("/");
                 }
                 else
                 {

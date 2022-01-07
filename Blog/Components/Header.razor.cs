@@ -32,8 +32,7 @@ namespace Blog.Components
         protected override async Task OnInitializedAsync()
         {
             await JSRuntime.InvokeVoidAsync("loadTheme");
-
-            var value = !(JSRuntime.InvokeAsync<string>("getTheme").Result == "dark");
+            var value = (await JSRuntime.InvokeAsync<string>("getTheme") == "dark");
             IsDarkMode =value;
         }
     }

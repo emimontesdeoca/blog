@@ -1,8 +1,13 @@
 ﻿function highlightCode() {
+    var markdownElement = document.getElementById("markdown");
+
+    markdownElement.style.display = "none";
+
     var pres = document.querySelectorAll("pre>code");
     for (var i = 0; i < pres.length; i++) {
         hljs.highlightBlock(pres[i]);
     }
+    markdownElement.style = "display:initial; -webkit-animation: fadeIn 1s;animation: fadeIn 1s;";
 }
 
 var getTheme = function () {
