@@ -12,10 +12,9 @@
 
     <link href="Blog.styles.css" rel="stylesheet" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
-
+    <script src="js/app.js"></script>
     <script>
-        var theme = JSON.parse(localStorage.getItem("darkmode") ?? "false") ? "dark" : "light";
-        document.documentElement.setAttribute('data-theme', theme);
+        loadTheme();
     </script>
 </head>
 
@@ -26,7 +25,6 @@
         </div>
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
-    <script src="js/app.js"></script>
 </body>
 
 </html>

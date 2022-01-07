@@ -11,18 +11,24 @@
 }
 
 var getTheme = function () {
-    return JSON.parse(localStorage.getItem("darkmode") ?? "false") ? "dark" : "light";
+    return JSON.parse(localStorage.getItem("darkmode") ?? userSystemIsDarkMode()) ? "dark" : "light";
 }
 
 var loadTheme = function () {
-    var theme = JSON.parse(localStorage.getItem("darkmode") ?? "false") ? "dark" : "light";
+    var theme = getTheme();
     document.documentElement.setAttribute('data-theme', theme);
 }
 
+var userSystemIsDarkMode = function () {
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+}
+
 var toggleTheme = function () {
-    var lsValue = JSON.parse(localStorage.getItem("darkmode") ?? "false");
+    var lsValue = JSON.parse(localStorage.getItem("darkmode") ?? userSystemIsDarkMode());
     var theme = !lsValue ? "dark" : "light";
+
     localStorage.setItem("darkmode", !lsValue);
     document.documentElement.setAttribute('data-theme', theme);
+
     return theme;
 }
