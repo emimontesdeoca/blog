@@ -7,7 +7,8 @@
     for (var i = 0; i < pres.length; i++) {
         hljs.highlightBlock(pres[i]);
     }
-    markdownElement.style = "display:initial; -webkit-animation: fadeIn 1s;animation: fadeIn 1s;";
+
+    markdownElement.style = "display:block; -webkit-animation: fadeIn 1s;animation: fadeIn 1s;";
 }
 
 var getTheme = function () {
